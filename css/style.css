@@ -22,7 +22,7 @@ body {
   min-height: 100vh;
   padding: clamp(32px, 6vw, 64px);
   background-color: #ccc;
-  background-image: url("../billeder/parallel15.jpg");
+  background-image: url("../billeder/baggrund.png");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -254,14 +254,31 @@ article {
   white-space: nowrap;
 }
 
-.route-map-slot {
-  margin-top: 20px;
-  padding: 14px;
-  background: #f4f4f4;
-  border: 1px dashed #ccc;
+.map-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 24px 0;
+}
+
+.map-figure {
+  margin: 0;
+  border: 1px solid var(--border-soft);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  background: #fff;
+}
+
+.map-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.map-caption {
+  padding: 10px 14px;
+  font-size: 13px;
   color: var(--text-muted);
-  font-size: 12px;
-  text-align: center;
+  border-top: 1px solid var(--border-soft);
 }
 
 .contact-block a.email {
