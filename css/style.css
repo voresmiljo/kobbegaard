@@ -44,12 +44,15 @@ a:hover { color: var(--link-hover); }
   background: var(--panel);
   box-shadow: 0 0 24px rgba(0, 0, 0, 0.18);
   border-radius: var(--radius);
-  overflow: hidden;
 }
 
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
   padding: 24px 0;
   border-bottom: 1px solid var(--border-soft);
+  background: var(--panel);
 }
 
 .site-header hgroup { text-align: center; }
@@ -218,6 +221,10 @@ article {
   margin: 24px 0;
 }
 
+.card-grid--two {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .card {
   border: 1px solid var(--border-soft);
   padding: 18px;
@@ -302,8 +309,7 @@ article {
 
 .map-gallery {
   display: grid;
-  grid-template-columns: 548fr 1024fr;
-  grid-template-rows: 962fr 895fr;
+  grid-template-columns: minmax(0, 548fr) minmax(0, 1024fr);
   gap: 3px;
   margin: 24px 0;
   border: 1px solid var(--border-soft);
@@ -311,22 +317,23 @@ article {
   overflow: hidden;
   background: var(--border-soft);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  align-items: start;
 }
 
 .map-gallery .map-figure {
   border: none;
   box-shadow: none;
-  min-height: 0;
-  display: flex;
+  display: block;
 }
 
 .map-gallery .map-figure:first-child {
-  grid-row: 1 / -1;
+  grid-row: 1 / span 2;
 }
 
 .map-gallery .map-figure img {
-  height: 100%;
-  object-fit: cover;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .map-caption {
@@ -378,6 +385,51 @@ article {
 .billeder-empty {
   font-size: 13px;
   color: var(--text-muted);
+}
+
+.photo-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.photo-item {
+  margin: 0;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.photo-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.photo-placeholder {
+  aspect-ratio: 4 / 3;
+  background: #f4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.photo-caption {
+  padding: 12px 16px;
+  font-size: 13px;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-soft);
+  min-height: 44px;
+}
+
+.photo-caption:empty::before {
+  content: "Undertekst kommer";
+  color: var(--border-soft);
 }
 
 .lightbox {
@@ -448,6 +500,7 @@ article {
   .info-strip { grid-template-columns: 1fr 1fr; }
   .columns { grid-template-columns: 1fr; }
   .card-grid { grid-template-columns: 1fr; }
+  .card-grid--two { grid-template-columns: 1fr; }
   .nav-menu { gap: 4px 16px; }
 
   .map-gallery {
@@ -457,10 +510,5 @@ article {
 
   .map-gallery .map-figure:first-child {
     grid-row: auto;
-  }
-
-  .map-gallery .map-figure img {
-    height: auto;
-    object-fit: contain;
   }
 }

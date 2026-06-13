@@ -24,7 +24,6 @@
           <li><a href="events.html">Events</a></li>
           <li><a href="ruter.html">Ruter</a></li>
           <li><a href="om.html" aria-current="page">Om</a></li>
-          <li><a href="billeder.html">Billeder</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
       </nav>
@@ -40,10 +39,66 @@
           <p class="section-label">Om Kobbegaard</p>
           <p>Kobbegaard er en gammel gård, der i dag er et bofællesskab. Det er ikke et hotel eller en organiseret ferieform — det er et sted, der gradvist udvikler sig med de mennesker, der bor og opholder sig her.</p>
 
-          <h2>Områder på gården</h2>
-          <figure class="map-figure">
-            <img src="billeder/gaard-omraader.png" alt="Kort over områderne på Kobbegaard"/>
-          </figure>
+          <h2>Billeder</h2>
+          <div class="billeder-gallery" aria-label="Billedgalleri">
+            <button type="button" class="billeder-card" data-full="billeder/galleri-01.png">
+              <img src="billeder/galleri-01.png" alt=""/>
+            </button>
+            <button type="button" class="billeder-card" data-full="billeder/galleri-02.png">
+              <img src="billeder/galleri-02.png" alt=""/>
+            </button>
+            <button type="button" class="billeder-card" data-full="billeder/galleri-03.png">
+              <img src="billeder/galleri-03.png" alt=""/>
+            </button>
+            <button type="button" class="billeder-card" data-full="billeder/galleri-04.png">
+              <img src="billeder/galleri-04.png" alt=""/>
+            </button>
+            <button type="button" class="billeder-card" data-full="billeder/galleri-05.png">
+              <img src="billeder/galleri-05.png" alt=""/>
+            </button>
+            <button type="button" class="billeder-card" data-full="billeder/galleri-06.png">
+              <img src="billeder/galleri-06.png" alt=""/>
+            </button>
+            <button type="button" class="billeder-card" data-full="billeder/galleri-07.png">
+              <img src="billeder/galleri-07.png" alt=""/>
+            </button>
+            <button type="button" class="billeder-card" data-full="billeder/galleri-08.png">
+              <img src="billeder/galleri-08.png" alt=""/>
+            </button>
+            <button type="button" class="billeder-card" data-full="billeder/galleri-09.png">
+              <img src="billeder/galleri-09.png" alt=""/>
+            </button>
+            <button type="button" class="billeder-card" data-full="billeder/galleri-10.png">
+              <img src="billeder/galleri-10.png" alt=""/>
+            </button>
+            <button type="button" class="billeder-card" data-full="billeder/galleri-11.png">
+              <img src="billeder/galleri-11.png" alt=""/>
+            </button>
+            <button type="button" class="billeder-card" data-full="billeder/galleri-12.png">
+              <img src="billeder/galleri-12.png" alt=""/>
+            </button>
+            <button type="button" class="billeder-card" data-full="billeder/galleri-13.png">
+              <img src="billeder/galleri-13.png" alt=""/>
+            </button>
+            <button type="button" class="billeder-card" data-full="billeder/galleri-14.png">
+              <img src="billeder/galleri-14.png" alt=""/>
+            </button>
+            <button type="button" class="billeder-card" data-full="billeder/galleri-15.png">
+              <img src="billeder/galleri-15.png" alt=""/>
+            </button>
+            <button type="button" class="billeder-card" data-full="billeder/galleri-16.png">
+              <img src="billeder/galleri-16.png" alt=""/>
+            </button>
+            <button type="button" class="billeder-card" data-full="billeder/galleri-17.png">
+              <img src="billeder/galleri-17.png" alt=""/>
+            </button>
+            <button type="button" class="billeder-card" data-full="billeder/galleri-18.png">
+              <img src="billeder/galleri-18.png" alt=""/>
+            </button>
+            <button type="button" class="billeder-card" data-full="billeder/galleri-19.png">
+              <img src="billeder/galleri-19.png" alt=""/>
+            </button>
+          </div>
         </div>
       </article>
     </div>
@@ -53,5 +108,13 @@
     </footer>
   </div>
 
+  <div id="lightbox" class="lightbox" hidden role="dialog" aria-modal="true" aria-label="Stort billede">
+    <div class="lightbox-inner">
+      <button type="button" class="lightbox-close" aria-label="Luk">&times;</button>
+      <img class="lightbox-image" src="" alt=""/>
+    </div>
+  </div>
+
+  <script src="js/gallery.js"></script>
 </body>
 </html>
