@@ -254,6 +254,51 @@ article {
   white-space: nowrap;
 }
 
+.route-legend {
+  margin: 24px 0;
+  border: 1px solid var(--border-soft);
+  background: #fafafa;
+}
+
+.route-legend-item {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 14px;
+  align-items: start;
+  padding: 12px 16px;
+  border-top: 1px solid var(--border);
+  font-size: 14px;
+}
+
+.route-legend-item:first-child { border-top: none; }
+
+.route-swatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-top: 2px;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+}
+
+.route-swatch--blaa { background: #1e6fd9; }
+.route-swatch--lyseblaa { background: #5ec4c4; }
+.route-swatch--groen { background: #3cb44a; }
+.route-swatch--lilla { background: #9b59b6; }
+.route-swatch--sort { background: #222; }
+.route-swatch--orange { background: #e67e22; }
+.route-swatch--gul { background: #f1c40f; }
+.route-swatch--roed { background: #e74c3c; }
+
+.route-legend-label {
+  font-weight: 600;
+  color: var(--heading);
+}
+
+.route-legend-text {
+  color: var(--text);
+}
+
 .map-gallery {
   display: flex;
   flex-direction: column;
