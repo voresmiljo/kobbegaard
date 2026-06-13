@@ -31,9 +31,11 @@
       font-size: 14px;
       line-height: 1.714285714;
       color: var(--text);
+      min-height: 100vh;
+      padding: clamp(32px, 6vw, 64px);
       background-color: #ccc;
       background-image: url("billeder/parallel15.jpg");
-      background-position: left top;
+      background-position: center center;
       background-size: cover;
       background-repeat: no-repeat;
       background-attachment: fixed;
@@ -47,11 +49,11 @@
     a:hover { color: var(--link-hover); }
 
     .page.site {
-      max-width: 960px;
+      width: min(780px, 100%);
       margin: 0 auto;
       padding: 0 24px;
       background: var(--panel);
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 0 24px rgba(0, 0, 0, 0.18);
     }
 
     /* ── HEADER ── */
@@ -279,7 +281,10 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
-      body { background-attachment: scroll; }
+      body {
+        background-attachment: scroll;
+        padding: 20px 16px;
+      }
 
       .page.site { padding: 0 16px; }
 
