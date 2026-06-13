@@ -303,13 +303,6 @@ article {
   color: var(--text);
 }
 
-.map-gallery {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  margin: 24px 0;
-}
-
 .map-figure {
   margin: 0;
   border: 1px solid var(--border-soft);
@@ -321,6 +314,35 @@ article {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.map-gallery {
+  display: grid;
+  grid-template-columns: 548fr 1024fr;
+  grid-template-rows: 962fr 895fr;
+  gap: 3px;
+  margin: 24px 0;
+  border: 1px solid var(--border-soft);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--border-soft);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.map-gallery .map-figure {
+  border: none;
+  box-shadow: none;
+  min-height: 0;
+  display: flex;
+}
+
+.map-gallery .map-figure:first-child {
+  grid-row: 1 / -1;
+}
+
+.map-gallery .map-figure img {
+  height: 100%;
+  object-fit: cover;
 }
 
 .map-caption {
@@ -353,4 +375,18 @@ article {
   .columns { grid-template-columns: 1fr; }
   .card-grid { grid-template-columns: 1fr; }
   .nav-menu { gap: 4px 16px; }
+
+  .map-gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .map-gallery .map-figure:first-child {
+    grid-row: auto;
+  }
+
+  .map-gallery .map-figure img {
+    height: auto;
+    object-fit: contain;
+  }
 }
