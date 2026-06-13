@@ -10,6 +10,7 @@
   --border:      #ededed;
   --border-soft: #e6e6e6;
   --meta:        #5e5e5e;
+  --radius:      12px;
 }
 
 html { scroll-behavior: smooth; }
@@ -42,7 +43,7 @@ a:hover { color: var(--link-hover); }
   padding: 0 24px;
   background: var(--panel);
   box-shadow: 0 0 24px rgba(0, 0, 0, 0.18);
-  border-radius: 12px;
+  border-radius: var(--radius);
   overflow: hidden;
 }
 
@@ -142,7 +143,7 @@ article {
   background: var(--border-soft);
   border: 1px solid var(--border-soft);
   margin: 24px 0;
-  border-radius: 12px;
+  border-radius: var(--radius);
   overflow: hidden;
 }
 
@@ -198,6 +199,7 @@ article {
   padding: 20px;
   background: #fafafa;
   border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
 }
 
 .section-label {
@@ -221,6 +223,7 @@ article {
   padding: 18px;
   background: #fff;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius);
 }
 
 .card h3 {
@@ -287,6 +290,8 @@ article {
   border: 1px solid var(--border-soft);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
   background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
 }
 
 .map-figure img {
@@ -302,7 +307,7 @@ article {
   gap: 3px;
   margin: 24px 0;
   border: 1px solid var(--border-soft);
-  border-radius: 8px;
+  border-radius: var(--radius);
   overflow: hidden;
   background: var(--border-soft);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
