@@ -42,17 +42,12 @@ a:hover { color: var(--link-hover); }
   margin: 0 auto;
   padding: 0 24px;
   background: var(--panel);
-  box-shadow: 0 0 24px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.08);
   border-radius: var(--radius);
 }
 
 .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  padding: 24px 0;
-  border-bottom: 1px solid var(--border-soft);
-  background: var(--panel);
+  padding: 24px 0 0;
 }
 
 .site-header hgroup { text-align: center; }
@@ -79,8 +74,14 @@ a:hover { color: var(--link-hover); }
 }
 
 .main-navigation {
+  position: sticky;
+  top: 0;
+  z-index: 20;
   margin-top: 20px;
+  padding: 12px 0 16px;
   text-align: center;
+  background: var(--panel);
+  border-bottom: 1px solid var(--border-soft);
 }
 
 .nav-menu {
@@ -308,32 +309,18 @@ article {
 }
 
 .map-gallery {
-  display: grid;
-  grid-template-columns: minmax(0, 548fr) minmax(0, 1024fr);
-  gap: 3px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   margin: 24px 0;
-  border: 1px solid var(--border-soft);
-  border-radius: var(--radius);
-  overflow: hidden;
-  background: var(--border-soft);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
-  align-items: start;
 }
 
 .map-gallery .map-figure {
-  border: none;
-  box-shadow: none;
-  display: block;
-}
-
-.map-gallery .map-figure:first-child {
-  grid-row: 1 / span 2;
-}
-
-.map-gallery .map-figure img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
+  border: 1px solid var(--border-soft);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #fff;
 }
 
 .map-caption {
@@ -353,6 +340,7 @@ article {
   text-align: center;
   color: var(--text-muted);
   font-size: 12px;
+  border-radius: 0 0 var(--radius) var(--radius);
 }
 
 .billeder-gallery {
@@ -502,13 +490,4 @@ article {
   .card-grid { grid-template-columns: 1fr; }
   .card-grid--two { grid-template-columns: 1fr; }
   .nav-menu { gap: 4px 16px; }
-
-  .map-gallery {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
-
-  .map-gallery .map-figure:first-child {
-    grid-row: auto;
-  }
 }
