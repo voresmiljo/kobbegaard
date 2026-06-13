@@ -3,437 +3,415 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kobbegaard</title>
+  <title>Kobbegaard · Gudhjem, Bornholm</title>
+  <meta name="description" content="Kobbegaard — gammel gård uden for Gudhjem. Ophold, events og natur tæt på skov, å og hav."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --cream:      #F5EEE3;
-      --cream-mid:  #EDE3D0;
-      --cream-deep: #EAE0CE;
-      --cream-dark: #E8DBC4;
-      --sand:       #C8A876;
-      --sage:       #DDE8D8;
-      --bark:       #2A1F14;
-      --bark-mid:   #3A2E1E;
-      --terracotta: #A0784A;
-      --brown:      #5C4430;
-      --brown-light:#7A6248;
-      --border:     rgba(90,60,30,0.12);
+      --text:        #444;
+      --text-muted:  #757575;
+      --text-light:  #636363;
+      --heading:     #515151;
+      --link:        #21759b;
+      --link-hover:  #0f3647;
+      --panel:       #fff;
+      --border:      #ededed;
+      --border-soft: #e6e6e6;
+      --meta:        #5e5e5e;
     }
 
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Inter', sans-serif;
-      background: var(--cream);
-      color: var(--bark);
+      font-family: "Open Sans", Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.714285714;
+      color: var(--text);
+      background-color: #ccc;
+      background-image: url("billeder/parallel15.jpg");
+      background-position: left top;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
     }
 
-    /* ── NAV ── */
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      background: var(--cream);
-      border-bottom: 0.5px solid rgba(90,60,30,0.15);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    .nav-logo {
-      font-family: 'Lora', serif;
-      font-size: 1.05rem;
-      letter-spacing: 0.05em;
-      color: var(--bark);
+    a {
+      color: var(--link);
       text-decoration: none;
     }
 
-    .nav-links {
+    a:hover { color: var(--link-hover); }
+
+    .page.site {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px;
+      background: var(--panel);
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+    }
+
+    /* ── HEADER ── */
+    .site-header {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .site-header hgroup { text-align: center; }
+
+    .site-title {
+      font-size: 24px;
+      line-height: 1.29;
+      margin-bottom: 14px;
+      font-weight: 700;
+    }
+
+    .site-title a {
+      color: var(--heading);
+      text-decoration: none;
+    }
+
+    .site-title a:hover { color: var(--link); }
+
+    .site-description {
+      font-size: 13px;
+      line-height: 1.85;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    .main-navigation {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .nav-menu {
       display: flex;
-      gap: 28px;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px 24px;
       list-style: none;
     }
 
-    .nav-links a {
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
+    .nav-menu a {
+      color: var(--meta);
+      font-size: 12px;
+      font-weight: 600;
       text-transform: uppercase;
-      color: var(--brown-light);
-      text-decoration: none;
-      transition: color 0.2s;
+      letter-spacing: 0.04em;
     }
 
-    .nav-links a:hover { color: var(--bark); }
+    .nav-menu a:hover { color: var(--link); }
 
-    /* ── HERO ── */
-    .hero {
-      padding: 72px 40px 64px;
-      background: var(--cream-mid);
-      border-bottom: 0.5px solid var(--border);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 64px;
-      align-items: end;
+    /* ── CONTENT ── */
+    .site-content { margin-top: 24px; }
+
+    article {
+      border-bottom: 4px double var(--border);
+      margin-bottom: 48px;
+      padding-bottom: 24px;
     }
 
-    .hero-kicker {
-      font-size: 0.68rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--terracotta);
-      margin-bottom: 18px;
+    .entry-header { margin-bottom: 24px; }
+
+    .entry-title {
+      font-size: 22px;
+      line-height: 1.27;
+      font-weight: 700;
+      color: var(--heading);
     }
 
-    h1 {
-      font-family: 'Lora', serif;
-      font-size: clamp(2rem, 3.5vw, 2.6rem);
-      line-height: 1.15;
-      font-weight: 400;
-      color: var(--bark);
+    .entry-content p {
+      margin-bottom: 24px;
     }
 
-    h1 em {
-      font-style: italic;
-      color: #7A5535;
+    .entry-content h2 {
+      font-size: 18px;
+      line-height: 1.33;
+      font-weight: 700;
+      color: var(--heading);
+      margin: 32px 0 16px;
     }
 
-    .hero-right { padding-bottom: 6px; }
+    .entry-content h2:first-child { margin-top: 0; }
 
-    .hero-desc {
-      font-size: 0.95rem;
-      line-height: 1.8;
-      color: var(--brown);
-      max-width: 380px;
-      margin-bottom: 28px;
+    .meta-line {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
     }
 
-    .link-text {
-      font-size: 0.78rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--bark);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(42,31,20,0.35);
-      padding-bottom: 2px;
-      transition: border-color 0.2s;
-    }
-
-    .link-text:hover { border-color: var(--bark); }
-
-    /* ── STRIP ── */
-    .strip {
+    /* ── INFO STRIP ── */
+    .info-strip {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      background: var(--sand);
+      gap: 1px;
+      background: var(--border-soft);
+      border: 1px solid var(--border-soft);
+      margin: 24px 0;
     }
 
-    .strip-cell {
-      padding: 22px 28px;
-      border-right: 0.5px solid rgba(255,255,255,0.2);
+    .info-cell {
+      background: #f9f9f9;
+      padding: 16px 18px;
     }
 
-    .strip-cell:last-child { border-right: none; }
-
-    .strip-label {
-      font-size: 0.65rem;
-      letter-spacing: 0.16em;
+    .info-label {
+      font-size: 11px;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.65);
-      margin-bottom: 5px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
     }
 
-    .strip-value {
-      font-family: 'Lora', serif;
-      font-size: 1rem;
-      color: #fff;
+    .info-value {
+      font-size: 14px;
+      color: var(--heading);
+      font-weight: 600;
     }
 
-    /* ── TWO-COL SECTIONS ── */
-    .two-col {
+    /* ── TWO COLUMNS ── */
+    .columns {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      border-bottom: 0.5px solid var(--border);
+      gap: 32px;
+      margin: 24px 0;
     }
 
-    .pane { padding: 52px 40px; }
-    .pane-alt { background: var(--cream-deep); border-left: 0.5px solid var(--border); }
-    .pane-sage { background: var(--sage); border-left: 0.5px solid rgba(90,60,30,0.1); }
+    .column-box {
+      padding: 20px;
+      background: #fafafa;
+      border: 1px solid var(--border-soft);
+    }
 
-    .section-tag {
-      font-size: 0.66rem;
-      letter-spacing: 0.18em;
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--terracotta);
-      margin-bottom: 14px;
-    }
-
-    h2 {
-      font-family: 'Lora', serif;
-      font-size: 1.45rem;
-      font-weight: 400;
-      line-height: 1.25;
-      color: var(--bark);
-      margin-bottom: 16px;
-    }
-
-    .body-text {
-      font-size: 0.9rem;
-      line-height: 1.8;
-      color: var(--brown);
+      color: var(--link);
+      margin-bottom: 8px;
+      font-weight: 600;
     }
 
     /* ── CARDS ── */
-    .cards {
+    .card-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: rgba(90,60,30,0.1);
-      border-top: 0.5px solid rgba(90,60,30,0.1);
-      border-bottom: 0.5px solid rgba(90,60,30,0.1);
+      gap: 16px;
+      margin: 24px 0;
     }
 
-    .card { padding: 32px 28px; background: var(--cream); }
-    .card:nth-child(2) { background: var(--cream-mid); }
-    .card:nth-child(3) { background: var(--cream-dark); }
-
-    .card-icon {
-      font-size: 1.2rem;
-      margin-bottom: 14px;
-      color: var(--terracotta);
+    .card {
+      border: 1px solid var(--border-soft);
+      padding: 18px;
+      background: #fff;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
     }
 
-    .card-title {
-      font-family: 'Lora', serif;
-      font-size: 1rem;
-      font-weight: 400;
+    .card h3 {
+      font-size: 15px;
+      color: var(--heading);
       margin-bottom: 8px;
-      color: var(--bark);
+      font-weight: 700;
     }
 
-    .card-text {
-      font-size: 0.83rem;
-      line-height: 1.7;
-      color: var(--brown-light);
+    .card p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.6;
     }
 
     /* ── ROUTES ── */
-    .routes { margin-top: 4px; }
+    .route-list { margin: 16px 0 0; }
 
-    .route {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
+    .route-item {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
       padding: 12px 0;
-      border-bottom: 0.5px solid rgba(90,60,30,0.1);
-      font-size: 0.88rem;
+      border-top: 1px solid var(--border);
+      font-size: 14px;
     }
 
-    .route:first-child { border-top: 0.5px solid rgba(90,60,30,0.1); }
-    .route-name { color: var(--brown); }
+    .route-item:last-child { border-bottom: 1px solid var(--border); }
+
+    .route-name { color: var(--text); }
 
     .route-dist {
-      color: var(--terracotta);
-      font-size: 0.8rem;
-      font-variant-numeric: tabular-nums;
-    }
-
-    /* ── KONTAKT ── */
-    .kontakt {
-      background: var(--bark-mid);
-      padding: 52px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 48px;
-    }
-
-    .kontakt .section-tag { color: rgba(200,168,118,0.7); }
-    .kontakt h2 { color: var(--cream); margin-bottom: 0; }
-
-    .email-link {
-      font-family: 'Lora', serif;
-      font-size: 1.1rem;
-      color: var(--sand);
-      text-decoration: none;
-      border-bottom: 0.5px solid rgba(200,168,118,0.4);
-      padding-bottom: 2px;
+      color: var(--text-muted);
+      font-size: 13px;
       white-space: nowrap;
     }
 
-    .email-link:hover { border-color: var(--sand); }
+    .route-map-slot {
+      margin-top: 20px;
+      padding: 14px;
+      background: #f4f4f4;
+      border: 1px dashed #ccc;
+      color: var(--text-muted);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    /* ── KONTAKT ── */
+    .contact-block {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 4px double var(--border);
+    }
+
+    .contact-block a.email {
+      font-size: 16px;
+      font-weight: 600;
+    }
 
     /* ── FOOTER ── */
-    footer {
-      padding: 18px 40px;
-      background: var(--bark);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .footer-logo {
-      font-family: 'Lora', serif;
-      font-size: 0.9rem;
-      color: var(--sand);
-    }
-
-    .footer-meta {
-      font-size: 0.72rem;
-      color: rgba(200,168,118,0.45);
+    .site-footer {
+      padding: 24px 0 32px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 12px;
     }
 
     /* ── RESPONSIVE ── */
-    @media (max-width: 700px) {
-      nav { padding: 16px 20px; }
-      .nav-links { gap: 16px; }
-      .nav-links a { font-size: 0.68rem; }
+    @media (max-width: 768px) {
+      body { background-attachment: scroll; }
 
-      .hero { grid-template-columns: 1fr; gap: 24px; padding: 48px 20px 40px; }
-      .strip { grid-template-columns: repeat(2, 1fr); }
-      .strip-cell:nth-child(2) { border-right: none; }
+      .page.site { padding: 0 16px; }
 
-      .two-col { grid-template-columns: 1fr; }
-      .pane { padding: 36px 20px; }
-      .pane-alt, .pane-sage { border-left: none; border-top: 0.5px solid var(--border); }
+      .info-strip { grid-template-columns: 1fr 1fr; }
+      .columns { grid-template-columns: 1fr; }
+      .card-grid { grid-template-columns: 1fr; }
 
-      .cards { grid-template-columns: 1fr; }
-
-      .kontakt { flex-direction: column; align-items: flex-start; gap: 24px; padding: 40px 20px; }
-
-      footer { padding: 16px 20px; }
+      .nav-menu { gap: 4px 16px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav>
-    <a href="/" class="nav-logo">Kobbegaard</a>
-    <ul class="nav-links">
-      <li><a href="/ophold">Ophold</a></li>
-      <li><a href="/events">Events</a></li>
-      <li><a href="/ruter">Ruter</a></li>
-      <li><a href="/om">Om</a></li>
-      <li><a href="/kontakt">Kontakt</a></li>
-    </ul>
-  </nav>
+  <div class="page site">
+    <header class="site-header">
+      <hgroup>
+        <h1 class="site-title"><a href="/">Kobbegaard</a></h1>
+        <h2 class="site-description">Gudhjem · Bornholm — ophold, events og natur</h2>
+      </hgroup>
+      <nav class="main-navigation" aria-label="Hovedmenu">
+        <ul class="nav-menu">
+          <li><a href="#ophold">Ophold</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#ruter">Ruter</a></li>
+          <li><a href="#om">Om</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div>
-      <p class="hero-kicker">Gudhjem · Bornholm</p>
-      <h1>En gammel gård<br/>tæt på skov,<br/><em>å og hav</em></h1>
-    </div>
-    <div class="hero-right">
-      <p class="hero-desc">Kobbegaard ligger uden for Gudhjem og bruges til beboelse, ophold, arrangementer og arbejdsophold i en uformel ramme. Skov, sø, å og havudsigt er inden for rækkevidde.</p>
-      <a href="/kontakt" class="link-text">Skriv til os</a>
-    </div>
-  </section>
+    <div class="site-content">
+      <article>
+        <header class="entry-header">
+          <h1 class="entry-title">En gammel gård tæt på skov, å og hav</h1>
+        </header>
 
-  <!-- STRIP -->
-  <div class="strip">
-    <div class="strip-cell">
-      <div class="strip-label">Beliggenhed</div>
-      <div class="strip-value">Uden for Gudhjem</div>
-    </div>
-    <div class="strip-cell">
-      <div class="strip-label">Natur</div>
-      <div class="strip-value">Skov, å, sø, hav</div>
-    </div>
-    <div class="strip-cell">
-      <div class="strip-label">Til</div>
-      <div class="strip-value">Ophold &amp; events</div>
-    </div>
-    <div class="strip-cell">
-      <div class="strip-label">Ramme</div>
-      <div class="strip-value">Uformel</div>
-    </div>
-  </div>
+        <div class="entry-content">
+          <p class="meta-line">Uden for Gudhjem · Bornholm</p>
 
-  <!-- OPHOLD + EVENTS -->
-  <div class="two-col">
-    <div class="pane">
-      <p class="section-tag">Ophold</p>
-      <h2>Overnatning tæt på naturen</h2>
-      <p class="body-text">Der er mulighed for overnatning på gården afhængigt af sæson og aktivitet — fra hytte og campingvogn til soveplads på høloft og shelterplads.</p>
-    </div>
-    <div class="pane pane-alt">
-      <p class="section-tag">Events</p>
-      <h2>Workshops, middage &amp; samlinger</h2>
-      <p class="body-text">Kobbegaard bruges til arrangementer og fælles aktiviteter. Vi kan stille stedet til rådighed og hjælpe med praktiske rammer og forplejning efter aftale.</p>
-    </div>
-  </div>
+          <p>Kobbegaard ligger uden for Gudhjem og bruges til beboelse, ophold, arrangementer og arbejdsophold i en uformel ramme. Skov, sø, å og havudsigt er inden for rækkevidde.</p>
 
-  <!-- OVERNATNINGSKORT -->
-  <div class="cards">
-    <div class="card">
-      <div class="card-icon">&#127968;</div>
-      <div class="card-title">Hytte</div>
-      <p class="card-text">Simpel, med udsigt til havet.</p>
-    </div>
-    <div class="card">
-      <div class="card-icon">&#128663;</div>
-      <div class="card-title">Campingvogn &amp; skurvogn</div>
-      <p class="card-text">Med udsigt over havet.</p>
-    </div>
-    <div class="card">
-      <div class="card-icon">&#127795;</div>
-      <div class="card-title">Shelter &amp; høloft</div>
-      <p class="card-text">Frit at benytte.</p>
-    </div>
-  </div>
+          <div class="info-strip">
+            <div class="info-cell">
+              <div class="info-label">Beliggenhed</div>
+              <div class="info-value">Uden for Gudhjem</div>
+            </div>
+            <div class="info-cell">
+              <div class="info-label">Natur</div>
+              <div class="info-value">Skov, å, sø, hav</div>
+            </div>
+            <div class="info-cell">
+              <div class="info-label">Til</div>
+              <div class="info-value">Ophold &amp; events</div>
+            </div>
+            <div class="info-cell">
+              <div class="info-label">Ramme</div>
+              <div class="info-value">Uformel</div>
+            </div>
+          </div>
 
-  <!-- RUTER + OM -->
-  <div class="two-col">
-    <div class="pane">
-      <p class="section-tag">Ruter fra gården</p>
-      <h2>Stier mod skov, å, kyst og Gudhjem</h2>
-      <div class="routes">
-        <div class="route">
-          <span class="route-name">Gennem skoven</span>
-          <span class="route-dist">ca. 1 km</span>
+          <div class="columns">
+            <div class="column-box" id="ophold">
+              <p class="section-label">Ophold</p>
+              <h2>Overnatning tæt på naturen</h2>
+              <p>Der er mulighed for overnatning på gården afhængigt af sæson og aktivitet — fra hytte og campingvogn til soveplads på høloft og shelterplads.</p>
+            </div>
+            <div class="column-box" id="events">
+              <p class="section-label">Events</p>
+              <h2>Workshops, middage &amp; samlinger</h2>
+              <p>Kobbegaard bruges til arrangementer og fælles aktiviteter. Vi kan stille stedet til rådighed og hjælpe med praktiske rammer og forplejning efter aftale.</p>
+            </div>
+          </div>
+
+          <h2>Overnatningsmuligheder</h2>
+          <div class="card-grid">
+            <div class="card">
+              <h3>Hytte</h3>
+              <p>Simpel, med udsigt til havet.</p>
+            </div>
+            <div class="card">
+              <h3>Campingvogn &amp; skurvogn</h3>
+              <p>Med udsigt over havet.</p>
+            </div>
+            <div class="card">
+              <h3>Shelter &amp; høloft</h3>
+              <p>Frit at benytte.</p>
+            </div>
+          </div>
+
+          <div class="columns" id="ruter">
+            <div class="column-box">
+              <p class="section-label">Ruter fra gården</p>
+              <h2>Stier mod skov, å, kyst og Gudhjem</h2>
+              <div class="route-list">
+                <div class="route-item">
+                  <span class="route-name">Gennem skoven</span>
+                  <span class="route-dist">ca. 1 km</span>
+                </div>
+                <div class="route-item">
+                  <span class="route-name">Op langs Kobbeå til Stavehøl Vandfald</span>
+                  <span class="route-dist">ca. 1 km</span>
+                </div>
+                <div class="route-item">
+                  <span class="route-name">Langs Kobbeå til Kobbe Strand</span>
+                  <span class="route-dist">ca. 2 km</span>
+                </div>
+                <div class="route-item">
+                  <span class="route-name">Gudhjem via klipperne og Melsted</span>
+                  <span class="route-dist">ca. 3,5 km</span>
+                </div>
+              </div>
+              <div class="route-map-slot">Rutekort kommer her — upload dine kort, så indsætter vi dem.</div>
+            </div>
+            <div class="column-box" id="om">
+              <p class="section-label">Om Kobbegaard</p>
+              <h2>Et levende sted på landet</h2>
+              <p>Kobbegaard er en gammel gård, der i dag er et bofællesskab. Det er ikke et hotel eller en organiseret ferieform — det er et sted, der gradvist udvikler sig med de mennesker, der bor og opholder sig her.</p>
+            </div>
+          </div>
+
+          <div class="contact-block" id="kontakt">
+            <h2>Spørgsmål om ophold eller arrangementer?</h2>
+            <p>Skriv til os på <a class="email" href="mailto:vores@kobbegaard.dk">vores@kobbegaard.dk</a></p>
+          </div>
         </div>
-        <div class="route">
-          <span class="route-name">Op langs Kobbeå til Stavehøl Vandfald</span>
-          <span class="route-dist">ca. 1 km</span>
-        </div>
-        <div class="route">
-          <span class="route-name">Langs Kobbeå til Kobbe Strand</span>
-          <span class="route-dist">ca. 2 km</span>
-        </div>
-        <div class="route">
-          <span class="route-name">Gudhjem via klipperne og Melsted</span>
-          <span class="route-dist">ca. 3,5 km</span>
-        </div>
-      </div>
+      </article>
     </div>
-    <div class="pane pane-sage">
-      <p class="section-tag">Om Kobbegaard</p>
-      <h2>Et levende sted på landet</h2>
-      <p class="body-text">Kobbegaard er en gammel gård, der i dag er et bofællesskab. Det er ikke et hotel eller en organiseret ferieform — det er et sted, der gradvist udvikler sig med de mennesker, der bor og opholder sig her.</p>
-    </div>
-  </div>
 
-  <!-- KONTAKT -->
-  <div class="kontakt">
-    <div>
-      <p class="section-tag">Kontakt</p>
-      <h2>Spørgsmål om ophold<br/>eller arrangementer?</h2>
-    </div>
-    <a class="email-link" href="mailto:vores@kobbegaard.dk">vores@kobbegaard.dk</a>
+    <footer class="site-footer">
+      Kobbegaard · Bornholm · Gudhjem
+    </footer>
   </div>
-
-  <!-- FOOTER -->
-  <footer>
-    <span class="footer-logo">Kobbegaard</span>
-    <span class="footer-meta">Bornholm · Gudhjem</span>
-  </footer>
 
 </body>
 </html>
