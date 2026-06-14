@@ -47,7 +47,11 @@ a:hover { color: var(--link-hover); }
 }
 
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
   padding: 24px 0 0;
+  background: var(--panel);
 }
 
 .site-header hgroup { text-align: center; }
@@ -74,9 +78,6 @@ a:hover { color: var(--link-hover); }
 }
 
 .main-navigation {
-  position: sticky;
-  top: 0;
-  z-index: 20;
   margin-top: 20px;
   padding: 12px 0 16px;
   text-align: center;
@@ -309,18 +310,35 @@ article {
 }
 
 .map-gallery {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  display: grid;
+  grid-template-columns: minmax(0, 548fr) minmax(0, 1024fr);
+  gap: 3px;
   margin: 24px 0;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--border-soft);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  align-items: start;
 }
 
 .map-gallery .map-figure {
-  border: 1px solid var(--border-soft);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
-  border-radius: var(--radius);
+  margin: 0;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
   overflow: hidden;
   background: #fff;
+}
+
+.map-gallery .map-figure:first-child {
+  grid-row: 1 / span 2;
+}
+
+.map-gallery .map-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .map-caption {
@@ -490,4 +508,12 @@ article {
   .card-grid { grid-template-columns: 1fr; }
   .card-grid--two { grid-template-columns: 1fr; }
   .nav-menu { gap: 4px 16px; }
+
+  .map-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .map-gallery .map-figure:first-child {
+    grid-row: auto;
+  }
 }
