@@ -311,6 +311,10 @@ article {
   overflow: hidden;
 }
 
+.entry-content > .map-figure {
+  margin: 24px 0;
+}
+
 .map-figure img {
   display: block;
   width: 100%;
