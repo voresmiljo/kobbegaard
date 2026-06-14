@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hemmelige badesteder · Kobbegaard</title>
-  <meta name="description" content="Hemmelige badesteder nær Kobbegaard — steder at bade uden for Gudhjem på Bornholm."/>
+  <title>Badested 1 · Hemmelige badesteder · Kobbegaard</title>
+  <meta name="description" content="Hemmeligt badested nær Kobbegaard på Bornholm."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
@@ -33,35 +33,21 @@
     <div class="site-content">
       <article>
         <header class="entry-header">
-          <h1 class="entry-title">Hemmelige badesteder</h1>
+          <p class="meta-line"><a href="hemmelige-badesteder.html">← Alle badesteder</a></p>
+          <h1 class="entry-title">Badested 1</h1>
         </header>
 
         <div class="entry-content">
-          <p class="section-label">Badning</p>
-          <p>Fem steder at bade i naturen omkring Kobbegaard. Vælg et badested for billeder, beskrivelse og kort.</p>
+          <p>Beskrivelse kommer snart.</p>
 
-          <nav class="badested-index" aria-label="Badesteder">
-            <a class="badested-card" href="badested-1.html">
+          <div class="badested-photo-grid" aria-label="Billeder">
+            <button type="button" class="billeder-card" data-full="billeder/badesteder/badested-1-01.png">
               <img src="billeder/badesteder/badested-1-01.png" alt=""/>
-              <p class="badested-card-title">Badested 1</p>
-            </a>
-            <a class="badested-card" href="badested-2.html">
-              <img src="billeder/badesteder/badested-2-01.png" alt=""/>
-              <p class="badested-card-title">Badested 2</p>
-            </a>
-            <a class="badested-card" href="badested-3.html">
-              <div class="badested-card-thumb badested-card-thumb--empty" aria-hidden="true"></div>
-              <p class="badested-card-title">Badested 3</p>
-            </a>
-            <a class="badested-card" href="badested-4.html">
-              <div class="badested-card-thumb badested-card-thumb--empty" aria-hidden="true"></div>
-              <p class="badested-card-title">Badested 4</p>
-            </a>
-            <a class="badested-card" href="badested-5.html">
-              <div class="badested-card-thumb badested-card-thumb--empty" aria-hidden="true"></div>
-              <p class="badested-card-title">Badested 5</p>
-            </a>
-          </nav>
+            </button>
+          </div>
+
+          <h2>Kort</h2>
+          <div class="map-placeholder" aria-hidden="true"></div>
         </div>
       </article>
     </div>
@@ -71,5 +57,13 @@
     </footer>
   </div>
 
+  <div id="lightbox" class="lightbox" hidden role="dialog" aria-modal="true" aria-label="Stort billede">
+    <div class="lightbox-inner">
+      <button type="button" class="lightbox-close" aria-label="Luk">&times;</button>
+      <img class="lightbox-image" src="" alt=""/>
+    </div>
+  </div>
+
+  <script src="js/gallery.js"></script>
 </body>
 </html>

@@ -502,6 +502,69 @@ article {
   background: #fff;
 }
 
+.badested-index {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.badested-card {
+  display: block;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  color: inherit;
+  text-decoration: none;
+}
+
+.badested-card:hover .badested-card-title {
+  color: var(--link);
+}
+
+.badested-card img,
+.badested-card-thumb {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.badested-card-thumb--empty {
+  background: #f4f4f4;
+}
+
+.badested-card-title {
+  padding: 12px 14px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--heading);
+}
+
+.badested-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.badested-photo-grid .billeder-card img {
+  aspect-ratio: 1;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.map-placeholder {
+  aspect-ratio: 16 / 10;
+  background: #f4f4f4;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  margin: 24px 0 0;
+}
+
 @media (max-width: 768px) {
   body {
     background-attachment: scroll;
@@ -521,5 +584,10 @@ article {
 
   .map-gallery .map-figure:first-child {
     grid-row: auto;
+  }
+
+  .badested-index,
+  .badested-photo-grid {
+    grid-template-columns: 1fr;
   }
 }
