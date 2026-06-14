@@ -9,6 +9,30 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://kobbegaard.dk/eget-telt.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kobbegaard.dk/campingvogn.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kobbegaard.dk/hytten.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kobbegaard.dk/hoejloft-og-shelters.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kobbegaard.dk/faelleskoekken.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kobbegaard.dk/bade-og-toilet.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://kobbegaard.dk/events.html</loc>
     <priority>0.8</priority>
   </url>
