@@ -513,6 +513,10 @@ article {
   margin: 24px 0;
 }
 
+.badested-index--three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .badested-card {
   display: block;
   border: 1px solid var(--border-soft);
@@ -537,6 +541,11 @@ article {
 }
 
 .badested-card-thumb--empty {
+  background: #f4f4f4;
+}
+
+.badested-card--map img {
+  object-fit: contain;
   background: #f4f4f4;
 }
 
@@ -592,6 +601,10 @@ article {
 
   .badested-index,
   .badested-photo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .badested-index--three {
     grid-template-columns: 1fr;
   }
 }
