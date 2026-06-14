@@ -266,27 +266,41 @@ article {
 
 .route-legend {
   margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
   font-size: 12px;
   line-height: 1.55;
   color: var(--text-muted);
 }
 
-.route-legend p {
-  margin: 0 0 4px;
+.route-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 8px;
 }
 
-.route-legend-heading {
+.route-swatch {
+  flex-shrink: 0;
+  min-width: 72px;
+  padding: 4px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 999px;
   font-size: 11px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: 8px !important;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: center;
+  color: #fff;
 }
 
-.route-legend strong {
-  font-weight: 600;
-  color: var(--text);
-}
+.route-swatch--blue { background: #1565c0; }
+.route-swatch--lightblue { background: #4fc3f7; color: #1a3a4a; }
+.route-swatch--green { background: #388e3c; }
+.route-swatch--purple { background: #7b1fa2; }
+.route-swatch--black { background: #212121; }
+.route-swatch--orange { background: #ef6c00; }
+.route-swatch--yellow { background: #fdd835; color: #4a4000; }
+.route-swatch--red { background: #c62828; }
 
 .map-figure {
   margin: 0;
