@@ -47,11 +47,8 @@ a:hover { color: var(--link-hover); }
 }
 
 .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  padding: 24px 0 0;
-  background: var(--panel);
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border-soft);
 }
 
 .site-header hgroup { text-align: center; }
@@ -79,10 +76,7 @@ a:hover { color: var(--link-hover); }
 
 .main-navigation {
   margin-top: 20px;
-  padding: 12px 0 16px;
   text-align: center;
-  background: var(--panel);
-  border-bottom: 1px solid var(--border-soft);
 }
 
 .nav-menu {
