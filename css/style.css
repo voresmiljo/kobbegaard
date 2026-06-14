@@ -438,12 +438,10 @@ article {
   font-size: 13px;
   color: var(--text-muted);
   border-top: 1px solid var(--border-soft);
-  min-height: 44px;
 }
 
-.photo-caption:empty::before {
-  content: "Undertekst kommer";
-  color: var(--border-soft);
+.photo-caption:empty {
+  display: none;
 }
 
 .lightbox {
