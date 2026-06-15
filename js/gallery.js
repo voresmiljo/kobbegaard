@@ -5,9 +5,18 @@
   var lightboxImg = lightbox.querySelector(".lightbox-image");
   var closeBtn = lightbox.querySelector(".lightbox-close");
 
-  function openLightbox(src) {
+  var lightboxInner = lightbox.querySelector(".lightbox-inner");
+
+  function openLightbox(src, maxWidth) {
     lightboxImg.src = src;
     lightboxImg.alt = "";
+    if (maxWidth) {
+      lightboxInner.classList.add("lightbox-inner--map");
+      lightboxInner.style.setProperty("--lightbox-max-width", maxWidth + "px");
+    } else {
+      lightboxInner.classList.remove("lightbox-inner--map");
+      lightboxInner.style.removeProperty("--lightbox-max-width");
+    }
     lightbox.hidden = false;
     lightbox.classList.add("is-open");
     document.body.style.overflow = "hidden";
@@ -17,6 +26,8 @@
     lightbox.classList.remove("is-open");
     lightbox.hidden = true;
     lightboxImg.src = "";
+    lightboxInner.classList.remove("lightbox-inner--map");
+    lightboxInner.style.removeProperty("--lightbox-max-width");
     document.body.style.overflow = "";
   }
 
@@ -24,7 +35,7 @@
     var card = event.target.closest(".billeder-card");
     if (!card) return;
     event.preventDefault();
-    openLightbox(card.dataset.full);
+    openLightbox(card.dataset.full, card.dataset.maxWidth);
   });
 
   closeBtn.addEventListener("click", closeLightbox);

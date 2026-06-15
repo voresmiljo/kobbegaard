@@ -510,6 +510,10 @@ article {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
 }
 
+.lightbox-inner--map {
+  max-width: min(var(--lightbox-max-width, 920px), calc(100vw - 48px));
+}
+
 .lightbox-image {
   display: block;
   max-width: 100%;
@@ -517,6 +521,18 @@ article {
   width: auto;
   height: auto;
   margin: 0 auto;
+}
+
+.billeder-card--map {
+  display: block;
+  max-width: var(--map-preview-width, 420px);
+  margin: 24px auto;
+  cursor: zoom-in;
+}
+
+.billeder-card--map img {
+  width: 100%;
+  height: auto;
 }
 
 .lightbox-close {
