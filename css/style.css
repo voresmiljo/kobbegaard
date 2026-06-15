@@ -31,6 +31,10 @@ body {
   background-attachment: fixed;
 }
 
+body.page--index {
+  font-family: "Inter", Helvetica, Arial, sans-serif;
+}
+
 a {
   color: var(--link);
   text-decoration: none;
