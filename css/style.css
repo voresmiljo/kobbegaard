@@ -6,7 +6,8 @@
   --heading:     #515151;
   --link:        #21759b;
   --link-hover:  #0f3647;
-  --panel:       #fff;
+  --milk:        #faf6f0;
+  --panel:       #fffef9;
   --border:      #ededed;
   --border-soft: #e6e6e6;
   --meta:        #5e5e5e;
@@ -119,6 +120,29 @@ article {
 
 .entry-content p { margin-bottom: 24px; }
 
+.text-frame {
+  padding: 20px 22px;
+  background: var(--milk);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  margin-bottom: 24px;
+}
+
+.text-frame > :last-child {
+  margin-bottom: 0;
+}
+
+.text-frame p,
+.text-frame ul,
+.text-frame ol,
+.text-frame h2 {
+  margin-bottom: 24px;
+}
+
+.text-frame h2:first-child {
+  margin-top: 0;
+}
+
 .entry-content h2 {
   font-size: 18px;
   line-height: 1.33;
@@ -147,7 +171,7 @@ article {
 }
 
 .info-cell {
-  background: #f9f9f9;
+  background: var(--milk);
   padding: 16px 18px;
 }
 
@@ -196,7 +220,7 @@ article {
 
 .column-box {
   padding: 20px;
-  background: #fafafa;
+  background: var(--milk);
   border: 1px solid var(--border-soft);
   border-radius: var(--radius);
 }
