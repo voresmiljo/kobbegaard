@@ -2,12 +2,104 @@
 <html lang="da">
 <head>
   <meta charset="UTF-8"/>
-  <meta http-equiv="refresh" content="0; url=index.html"/>
-  <link rel="canonical" href="index.html"/>
-  <title>Kobbegaard · Gudhjem, Bornholm</title>
-  <script>location.replace("index.html");</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Om · Kobbegaard</title>
+  <meta name="description" content="Billeder fra Kobbegaard — gammel gård og bofællesskab uden for Gudhjem på Bornholm."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-  <p><a href="index.html">Gå til forsiden</a></p>
+
+  <div class="page site">
+    <header class="site-header">
+      <hgroup>
+        <h1 class="site-title"><a href="index.html">Kobbegaard</a></h1>
+        <h2 class="site-description">Gudhjem · Bornholm</h2>
+      </hgroup>
+      <nav class="main-navigation" aria-label="Hovedmenu">
+        <ul class="nav-menu">
+          <li><a href="ophold.html">Ophold</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="ruter.html">Ruter</a></li>
+          <li><a href="badesteder.html">Badesteder</a></li>
+          <li><a href="om.html" aria-current="page">Om</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="site-content">
+      <article>
+        <header class="entry-header">
+          <h1 class="entry-title">Om Kobbegaard</h1>
+        </header>
+
+        <div class="entry-content">
+          <div class="billeder-gallery" aria-label="Billeder fra Kobbegaard">
+            <button type="button" class="billeder-card" data-full="billeder/galleri-01.png">
+              <img src="billeder/galleri-01.png" alt=""/>
+            </button>
+            <button type="button" class="billeder-card" data-full="billeder/galleri-02.png">
+              <img src="billeder/galleri-02.png" alt=""/>
+            </button>
+            <button type="button" class="billeder-card" data-full="billeder/galleri-04.png">
+              <img src="billeder/galleri-04.png" alt=""/>
+            </button>
+            <button type="button" class="billeder-card" data-full="billeder/galleri-05.png">
+              <img src="billeder/galleri-05.png" alt=""/>
+            </button>
+            <button type="button" class="billeder-card" data-full="billeder/galleri-06.png">
+              <img src="billeder/galleri-06.png" alt=""/>
+            </button>
+            <button type="button" class="billeder-card" data-full="billeder/galleri-07.png">
+              <img src="billeder/galleri-07.png" alt=""/>
+            </button>
+            <button type="button" class="billeder-card" data-full="billeder/galleri-08.png">
+              <img src="billeder/galleri-08.png" alt=""/>
+            </button>
+            <button type="button" class="billeder-card" data-full="billeder/galleri-09.png">
+              <img src="billeder/galleri-09.png" alt=""/>
+            </button>
+            <button type="button" class="billeder-card" data-full="billeder/galleri-10.png">
+              <img src="billeder/galleri-10.png" alt=""/>
+            </button>
+            <button type="button" class="billeder-card" data-full="billeder/galleri-11.png">
+              <img src="billeder/galleri-11.png" alt=""/>
+            </button>
+            <button type="button" class="billeder-card" data-full="billeder/galleri-12.png">
+              <img src="billeder/galleri-12.png" alt=""/>
+            </button>
+            <button type="button" class="billeder-card" data-full="billeder/galleri-13.png">
+              <img src="billeder/galleri-13.png" alt=""/>
+            </button>
+            <button type="button" class="billeder-card" data-full="billeder/galleri-14.png">
+              <img src="billeder/galleri-14.png" alt=""/>
+            </button>
+            <button type="button" class="billeder-card" data-full="billeder/galleri-15.png">
+              <img src="billeder/galleri-15.png" alt=""/>
+            </button>
+            <button type="button" class="billeder-card" data-full="billeder/galleri-17.png">
+              <img src="billeder/galleri-17.png" alt=""/>
+            </button>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <footer class="site-footer">
+      Kobbegaard · Bornholm · Gudhjem
+    </footer>
+  </div>
+
+  <div id="lightbox" class="lightbox" hidden role="dialog" aria-modal="true" aria-label="Stort billede">
+    <div class="lightbox-inner">
+      <button type="button" class="lightbox-close" aria-label="Luk">&times;</button>
+      <img class="lightbox-image" src="" alt=""/>
+    </div>
+  </div>
+
+  <script src="js/gallery.js"></script>
 </body>
 </html>
