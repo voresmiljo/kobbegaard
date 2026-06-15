@@ -427,6 +427,12 @@ article {
   height: auto;
 }
 
+.billeder-card--contain img {
+  aspect-ratio: 1;
+  object-fit: contain;
+  background: var(--milk);
+}
+
 .billeder-empty {
   font-size: 13px;
   color: var(--text-muted);
