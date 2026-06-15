@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Historisk · Om · Kobbegaard</title>
+  <meta name="description" content="Historiske billeder fra Kobbegaard — gammel gård ved Kobbeåen uden for Gudhjem."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <div class="page site">
+    <header class="site-header">
+      <hgroup>
+        <h1 class="site-title"><a href="index.html">Kobbegaard</a></h1>
+        <h2 class="site-description">Gudhjem · Bornholm</h2>
+      </hgroup>
+      <nav class="main-navigation" aria-label="Hovedmenu">
+        <ul class="nav-menu">
+          <li><a href="ophold.html">Ophold</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="ruter.html">Ruter</a></li>
+          <li><a href="badesteder.html">Badesteder</a></li>
+          <li><a href="om.html" aria-current="page">Om</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="site-content">
+      <article>
+        <header class="entry-header">
+          <p class="meta-line"><a href="om.html">← Om Kobbegaard</a></p>
+          <h1 class="entry-title">Historisk</h1>
+        </header>
+
+        <div class="entry-content">
+          <div class="billeder-gallery" aria-label="Historiske billeder fra Kobbegaard"></div>
+        </div>
+      </article>
+    </div>
+
+    <footer class="site-footer">
+      Kobbegaard · Bornholm · Gudhjem
+    </footer>
+  </div>
+
+  <div id="lightbox" class="lightbox" hidden role="dialog" aria-modal="true" aria-label="Stort billede">
+    <div class="lightbox-inner">
+      <button type="button" class="lightbox-close" aria-label="Luk">&times;</button>
+      <img class="lightbox-image" src="" alt=""/>
+    </div>
+  </div>
+
+  <script src="js/gallery.js"></script>
+</body>
+</html>
