@@ -42,7 +42,17 @@
           <p>Beskrivelse kommer snart.</p>
 
           </div>
-          <div class="badested-photo-grid" aria-label="Billeder"></div>
+          <div class="badested-photo-grid" aria-label="Billeder">
+            <button type="button" class="billeder-card" data-full="billeder/badesteder/kvik-01.png">
+              <img src="billeder/badesteder/kvik-01.png" alt=""/>
+            </button>
+            <button type="button" class="billeder-card" data-full="billeder/badesteder/kvik-02.png">
+              <img src="billeder/badesteder/kvik-02.png" alt=""/>
+            </button>
+            <button type="button" class="billeder-card" data-full="billeder/badesteder/kvik-03.png">
+              <img src="billeder/badesteder/kvik-03.png" alt=""/>
+            </button>
+          </div>
 
           <div class="text-frame">
           <h2>Kort</h2>
@@ -57,5 +67,13 @@
     </footer>
   </div>
 
+  <div id="lightbox" class="lightbox" hidden role="dialog" aria-modal="true" aria-label="Stort billede">
+    <div class="lightbox-inner">
+      <button type="button" class="lightbox-close" aria-label="Luk">&times;</button>
+      <img class="lightbox-image" src="" alt=""/>
+    </div>
+  </div>
+
+  <script src="js/gallery.js"></script>
 </body>
 </html>
