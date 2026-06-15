@@ -17,7 +17,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: "Inter", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.714285714;
   color: var(--text);
@@ -29,10 +29,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-}
-
-body.page--index {
-  font-family: "Inter", Helvetica, Arial, sans-serif;
 }
 
 a {
