@@ -81,10 +81,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kobbegaard.dk/om.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://kobbegaard.dk/kontakt.html</loc>
     <priority>0.8</priority>
   </url>
