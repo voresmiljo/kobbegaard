@@ -109,7 +109,10 @@ article {
   padding-bottom: 24px;
 }
 
-.entry-header { margin-bottom: 24px; }
+.entry-header {
+  margin-bottom: 24px;
+  padding: 0 22px;
+}
 
 .entry-title {
   font-size: 22px;
