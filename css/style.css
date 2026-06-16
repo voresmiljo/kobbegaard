@@ -342,6 +342,11 @@ article {
   margin: 24px 0;
 }
 
+.map-figure--static {
+  margin-top: 32px;
+  cursor: default;
+}
+
 .map-figure img {
   display: block;
   width: 100%;
