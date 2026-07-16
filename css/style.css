@@ -629,7 +629,7 @@ article {
   background: #f4f4f4;
   border: 1px solid var(--border-soft);
   border-radius: var(--radius);
-  margin: 24px 0 0;
+  margin: 8px 0 32px;
 }
 
 @media (max-width: 768px) {
