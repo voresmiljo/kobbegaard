@@ -42,7 +42,9 @@
           <p>Kort over gården set oppefra med inddeling af områder.</p>
           </div>
 
-          <div class="map-placeholder" aria-label="Plads til kort over gården"></div>
+          <button type="button" class="billeder-card billeder-card--map" data-full="billeder/gaard-omraeder.png">
+            <img src="billeder/gaard-omraeder.png" alt="Kort over Kobbegaard med inddeling af områder"/>
+          </button>
 
           <div class="text-frame">
           <h2>Ruter</h2>
@@ -77,5 +79,13 @@
     </footer>
   </div>
 
+  <div id="lightbox" class="lightbox" hidden role="dialog" aria-modal="true" aria-label="Stort billede">
+    <div class="lightbox-inner lightbox-inner--map">
+      <button type="button" class="lightbox-close" aria-label="Luk">&times;</button>
+      <img class="lightbox-image" src="" alt=""/>
+    </div>
+  </div>
+
+  <script src="js/gallery.js"></script>
 </body>
 </html>
