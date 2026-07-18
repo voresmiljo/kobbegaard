@@ -76,10 +76,9 @@ a:hover { color: var(--link-hover); }
 }
 
 .main-navigation {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
+  position: relative;
   margin-top: 20px;
+  text-align: center;
 }
 
 .nav-menu {
@@ -88,16 +87,6 @@ a:hover { color: var(--link-hover); }
   justify-content: center;
   gap: 6px 24px;
   list-style: none;
-}
-
-.nav-menu--main {
-  grid-column: 2;
-}
-
-.nav-menu--side {
-  grid-column: 3;
-  justify-content: flex-end;
-  padding-left: 40px;
 }
 
 .nav-menu a {
@@ -111,6 +100,12 @@ a:hover { color: var(--link-hover); }
 .nav-menu a:hover,
 .nav-menu a[aria-current="page"] {
   color: var(--link);
+}
+
+.nav-menu .nav-item--anbefalinger {
+  position: static;
+  transform: none;
+  margin-left: 12px;
 }
 
 .site-content { margin-top: 24px; }
@@ -661,16 +656,11 @@ article {
   .card-grid { grid-template-columns: 1fr; }
   .card-grid--two { grid-template-columns: 1fr; }
   .nav-menu { gap: 4px 16px; }
-  .main-navigation {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .nav-menu--main,
-  .nav-menu--side {
-    grid-column: auto;
-    justify-content: center;
-    padding-left: 0;
+  .nav-menu .nav-item--anbefalinger {
+    margin-left: 8px;
+    width: auto;
+    margin-top: 0;
+    text-align: inherit;
   }
 
   .map-gallery {
