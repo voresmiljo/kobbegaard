@@ -77,8 +77,24 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://kobbegaard.dk/nordostkystens-strande.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kobbegaard.dk/sydkystens-strande.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://kobbegaard.dk/aktiviteter.html</loc>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kobbegaard.dk/surf.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kobbegaard.dk/festivaller.html</loc>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://kobbegaard.dk/lokale-spisesteder.html</loc>
