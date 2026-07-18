@@ -76,6 +76,7 @@ a:hover { color: var(--link-hover); }
 }
 
 .main-navigation {
+  position: relative;
   margin-top: 20px;
   text-align: center;
 }
@@ -102,7 +103,11 @@ a:hover { color: var(--link-hover); }
 }
 
 .nav-menu .nav-item--anbefalinger {
-  margin-left: 28px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 0;
 }
 
 .site-content { margin-top: 24px; }
@@ -653,7 +658,13 @@ article {
   .card-grid { grid-template-columns: 1fr; }
   .card-grid--two { grid-template-columns: 1fr; }
   .nav-menu { gap: 4px 16px; }
-  .nav-menu .nav-item--anbefalinger { margin-left: 16px; }
+  .nav-menu .nav-item--anbefalinger {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+  }
 
   .map-gallery {
     grid-template-columns: 1fr;
