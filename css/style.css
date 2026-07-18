@@ -101,6 +101,10 @@ a:hover { color: var(--link-hover); }
   color: var(--link);
 }
 
+.nav-menu .nav-item--anbefalinger {
+  margin-left: 28px;
+}
+
 .site-content { margin-top: 24px; }
 
 article {
@@ -649,6 +653,7 @@ article {
   .card-grid { grid-template-columns: 1fr; }
   .card-grid--two { grid-template-columns: 1fr; }
   .nav-menu { gap: 4px 16px; }
+  .nav-menu .nav-item--anbefalinger { margin-left: 16px; }
 
   .map-gallery {
     grid-template-columns: 1fr;
