@@ -565,6 +565,13 @@ article {
   object-fit: cover;
 }
 
+/* Show full map + legend (no square crop) */
+.map-thumb-grid--full .billeder-card img {
+  aspect-ratio: auto;
+  object-fit: contain;
+  height: auto;
+}
+
 .lightbox-close {
   position: absolute;
   top: 10px;
