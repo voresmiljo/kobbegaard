@@ -690,6 +690,15 @@ article {
   height: auto;
 }
 
+.badested-photo-grid .billeder-card--placeholder {
+  cursor: default;
+  pointer-events: none;
+}
+
+.badested-photo-grid .billeder-card--placeholder .badested-card-thumb {
+  aspect-ratio: 1;
+}
+
 .map-placeholder {
   aspect-ratio: 16 / 10;
   background: #f4f4f4;
