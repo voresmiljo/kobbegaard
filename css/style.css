@@ -547,6 +547,25 @@ article {
   height: auto;
 }
 
+.map-thumb-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.map-thumb-grid .billeder-card {
+  margin: 0;
+  cursor: zoom-in;
+}
+
+.map-thumb-grid .billeder-card img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  background: #f4f4f4;
+}
+
 .lightbox-close {
   position: absolute;
   top: 10px;
