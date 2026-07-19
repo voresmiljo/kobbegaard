@@ -565,17 +565,6 @@ article {
   object-fit: cover;
 }
 
-.map-thumb-grid--single {
-  grid-template-columns: 1fr;
-  max-width: 560px;
-}
-
-.map-thumb-grid--single .billeder-card img {
-  aspect-ratio: 5 / 4;
-  object-fit: cover;
-  object-position: center;
-}
-
 .lightbox-close {
   position: absolute;
   top: 10px;
