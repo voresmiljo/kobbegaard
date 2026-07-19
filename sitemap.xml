@@ -117,6 +117,34 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://kobbegaard.dk/biografen.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kobbegaard.dk/svommehallen.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kobbegaard.dk/museerne.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kobbegaard.dk/gudhjem-museum.html</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kobbegaard.dk/oluf-host-museet.html</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kobbegaard.dk/bornholms-museum.html</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kobbegaard.dk/gallerierne.html</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kobbegaard.dk/gryden.html</loc>
     <priority>0.7</priority>
   </url>
