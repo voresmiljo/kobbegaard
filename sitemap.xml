@@ -117,6 +117,10 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://kobbegaard.dk/surf.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://kobbegaard.dk/biografen.html</loc>
     <priority>0.6</priority>
   </url>
