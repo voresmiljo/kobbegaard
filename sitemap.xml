@@ -85,32 +85,32 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kobbegaard.dk/aktiviteter.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://kobbegaard.dk/solnedgang-norresand.html</loc>
     <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://kobbegaard.dk/surf.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://kobbegaard.dk/festivaller.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://kobbegaard.dk/lokale-spisesteder.html</loc>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://kobbegaard.dk/provianten.html</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kobbegaard.dk/naturoplevelser.html</loc>
-    <priority>0.7</priority>
+    <loc>https://kobbegaard.dk/kobbeaaen-stavehoel.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kobbegaard.dk/osterlars-rundkirke.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kobbegaard.dk/bornholms-middelaldercenter.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kobbegaard.dk/bornpark-minigolf.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kobbegaard.dk/bornholms-skibakke.html</loc>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://kobbegaard.dk/gryden.html</loc>
