@@ -55,10 +55,23 @@
             </button>
           </div>
 
-          <div class="badested-photo-grid" data-gallery aria-label="Billeder fra gården">
-            <div class="billeder-card billeder-card--placeholder" aria-hidden="true">
-              <div class="badested-card-thumb badested-card-thumb--empty"></div>
-            </div>
+          <div class="badested-photo-grid badested-photo-grid--single" data-gallery aria-label="Billeder fra gården">
+            <button type="button" class="billeder-card" data-full="billeder/gaard/hullet-01.jpg" data-caption="Hullet">
+              <img src="billeder/gaard/hullet-01.jpg" alt="Hullet"/>
+              <span class="photo-caption">Hullet</span>
+            </button>
+            <button type="button" class="billeder-card billeder-card--hidden" data-full="billeder/gaard/hullet-02.jpg" data-caption="Hullet" tabindex="-1" aria-hidden="true">
+              <img src="billeder/gaard/hullet-02.jpg" alt="Hullet"/>
+            </button>
+            <button type="button" class="billeder-card billeder-card--hidden" data-full="billeder/gaard/hullet-03.jpg" data-caption="Hullet" tabindex="-1" aria-hidden="true">
+              <img src="billeder/gaard/hullet-03.jpg" alt="Hullet"/>
+            </button>
+            <button type="button" class="billeder-card billeder-card--hidden" data-full="billeder/gaard/hullet-04.jpg" data-caption="Hullet" tabindex="-1" aria-hidden="true">
+              <img src="billeder/gaard/hullet-04.jpg" alt="Hullet"/>
+            </button>
+            <button type="button" class="billeder-card billeder-card--hidden" data-full="billeder/gaard/hullet-05.jpg" data-caption="Hullet" tabindex="-1" aria-hidden="true">
+              <img src="billeder/gaard/hullet-05.jpg" alt="Hullet"/>
+            </button>
           </div>
 
           <div class="text-frame">
@@ -94,6 +107,7 @@
     <div class="lightbox-inner lightbox-inner--map">
       <button type="button" class="lightbox-close" aria-label="Luk">&times;</button>
       <img class="lightbox-image" src="" alt=""/>
+      <p class="lightbox-caption" hidden></p>
     </div>
   </div>
 

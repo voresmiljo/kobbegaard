@@ -3,6 +3,13 @@
   if (!lightbox) return;
 
   var lightboxImg = lightbox.querySelector(".lightbox-image");
+  var lightboxCaption = lightbox.querySelector(".lightbox-caption");
+  if (!lightboxCaption) {
+    lightboxCaption = document.createElement("p");
+    lightboxCaption.className = "lightbox-caption";
+    lightboxCaption.hidden = true;
+    lightbox.querySelector(".lightbox-inner").appendChild(lightboxCaption);
+  }
   var closeBtn = lightbox.querySelector(".lightbox-close");
   var lightboxInner = lightbox.querySelector(".lightbox-inner");
   var prevBtn = lightbox.querySelector(".lightbox-prev");
@@ -41,6 +48,13 @@
     var item = galleryItems[galleryIndex];
     lightboxImg.src = item.src;
     lightboxImg.alt = item.alt || "";
+    if (item.caption) {
+      lightboxCaption.textContent = item.caption;
+      lightboxCaption.hidden = false;
+    } else {
+      lightboxCaption.textContent = "";
+      lightboxCaption.hidden = true;
+    }
     var multi = galleryItems.length > 1;
     prevBtn.hidden = !multi;
     nextBtn.hidden = !multi;
@@ -53,9 +67,11 @@
       : [card];
 
     galleryItems = cards.map(function (el) {
+      var captionEl = el.querySelector(".photo-caption");
       return {
         src: el.dataset.full,
         alt: (el.querySelector("img") && el.querySelector("img").alt) || "",
+        caption: el.dataset.caption || (captionEl && captionEl.textContent.trim()) || "",
         maxWidth: el.dataset.maxWidth
       };
     });
@@ -81,6 +97,8 @@
     lightbox.classList.remove("is-open");
     lightbox.hidden = true;
     lightboxImg.src = "";
+    lightboxCaption.textContent = "";
+    lightboxCaption.hidden = true;
     galleryItems = [];
     galleryIndex = 0;
     prevBtn.hidden = true;
