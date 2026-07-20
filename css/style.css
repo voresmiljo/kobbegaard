@@ -695,6 +695,18 @@ article {
   max-width: calc(50% - 6px);
 }
 
+.farm-photo-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.farm-photo-row .badested-photo-grid {
+  margin: 0;
+  max-width: none;
+}
+
 .badested-photo-grid .billeder-card img {
   aspect-ratio: 1;
   object-fit: cover;
@@ -781,6 +793,10 @@ article {
 
   .badested-photo-grid--single {
     max-width: 100%;
+  }
+
+  .farm-photo-row {
+    grid-template-columns: 1fr;
   }
 
   .badested-index--three {
