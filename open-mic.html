@@ -43,31 +43,21 @@
           <p>Aftenerne har budt på mange sjove, smukke og uforglemmelige oplevelser – blandt andet skyggeteater, human beatbox, mavedans, digtoplæsninger, kunstperformances, musikalske optrædener, børneoptrædener, teater og meget mere.</p>
           <p>Formålet har været at skabe et uformelt rum, hvor mennesker kunne mødes, prøve kræfter med scenen og inspirere hinanden. Uden tilmelding og uden krav om at være professionel – bare lysten til at bidrage og være med.</p>
           </div>
-          <div class="photo-gallery" aria-label="Billeder">
-            <figure class="photo-item">
-              <img src="billeder/galleri-16.png" alt=""/>
-            </figure>
-            <figure class="photo-item">
-              <img src="billeder/events/open-mic-01.png" alt=""/>
-            </figure>
-            <figure class="photo-item">
-              <img src="billeder/events/open-mic-02.png" alt=""/>
-            </figure>
-            <figure class="photo-item">
-              <img src="billeder/events/open-mic-03.png" alt=""/>
-            </figure>
-            <figure class="photo-item">
-              <img src="billeder/events/open-mic-04.png" alt=""/>
-            </figure>
-            <figure class="photo-item">
-              <img src="billeder/events/open-mic-05.png" alt=""/>
-            </figure>
-            <figure class="photo-item">
-              <img src="billeder/events/open-mic-06.png" alt=""/>
-            </figure>
-            <figure class="photo-item">
-              <img src="billeder/events/open-mic-07.png" alt=""/>
-            </figure>
+
+          <div class="badested-photo-grid badested-photo-grid--single" data-gallery aria-label="Open Mic">
+            <button type="button" class="billeder-card" data-full="billeder/events/open-mic-08.jpg" data-caption="Open Mic">
+              <img src="billeder/events/open-mic-08.jpg" alt="Open Mic"/>
+              <span class="photo-caption">Open Mic</span>
+            </button>
+            <button type="button" class="billeder-card billeder-card--hidden" data-full="billeder/events/open-mic-09.jpg" data-caption="Open Mic" tabindex="-1" aria-hidden="true">
+              <img src="billeder/events/open-mic-09.jpg" alt="Open Mic"/>
+            </button>
+            <button type="button" class="billeder-card billeder-card--hidden" data-full="billeder/events/open-mic-10.jpg" data-caption="Open Mic" tabindex="-1" aria-hidden="true">
+              <img src="billeder/events/open-mic-10.jpg" alt="Open Mic"/>
+            </button>
+            <button type="button" class="billeder-card billeder-card--hidden" data-full="billeder/events/open-mic-11.jpg" data-caption="Open Mic" tabindex="-1" aria-hidden="true">
+              <img src="billeder/events/open-mic-11.jpg" alt="Open Mic"/>
+            </button>
           </div>
         </div>
       </article>
@@ -78,5 +68,14 @@
     </footer>
   </div>
 
+  <div id="lightbox" class="lightbox" hidden role="dialog" aria-modal="true" aria-label="Stort billede">
+    <div class="lightbox-inner">
+      <button type="button" class="lightbox-close" aria-label="Luk">&times;</button>
+      <img class="lightbox-image" src="" alt=""/>
+      <p class="lightbox-caption" hidden></p>
+    </div>
+  </div>
+
+  <script src="js/gallery.js"></script>
 </body>
 </html>
